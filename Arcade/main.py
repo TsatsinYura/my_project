@@ -1,13 +1,7 @@
 from random import randint
 from pygame import *
 init()
-
-C_WHITE = (255, 255, 255)
-C_RED = (255, 0, 0)
-C_GREEN = (0, 255, 0)
-C_BLACK = (0, 0, 0)
-C_FLOOR = (12, 17, 34)
-C_WALLS = (86, 4, 1)
+dsxzgdfzgh
 
 big_font = font.SysFont("Corbel", 72, True)
 regular_font = font.SysFont("Corbel", 45, True)
@@ -39,7 +33,7 @@ hero_images_shotgun = [transform.scale(image.load('images/hero_shotgun_walk_1.pn
 img_file_enemy = 'images/enemy.png'
 img_file_princess = 'images/princess.png'
 img_bullet = 'images/bullet.png'
-
+asdfgadg
 class Princess(sprite.Sprite):
     def __init__(self, **args):
         sprite.Sprite.__init__(self)
@@ -134,7 +128,7 @@ class Hero(sprite.Sprite):
             if self.direction == 'right':
                 self.image = (hero_images_pistol if self.gun == 'pistol' else hero_images_shotgun)[2]
             else:
-                self.image = transform.flip((hero_images_pistol if self.gun == 'pistol' else hero_images_shotgun)[2], True, False)
+        sdfgsfdg        self.image = transform.flip((hero_images_pistol if self.gun == 'pistol' else hero_images_shotgun)[2], True, False)
 
         self.rect.x += self.x_speed
         # если зашли за стенку, то встанем вплотную к стене
@@ -406,13 +400,7 @@ while run:
             all_sprites.draw(window)
             gun_clip.draw(window)
 
-            if sprite.collide_rect(robin, pr):
-                finished = True
-                window.fill(C_BLACK)
-                window.blit(win, (win_width / 2 - win.get_width() / 2, 250))
-                window.blit(restart_text, (win_width / 2 - restart_text.get_width() / 2, 350))
 
-            if robin not in all_sprites or robin.rect.top > win_height:
                 finished = True           
                 window.fill(C_BLACK)
                 window.blit(game_over, (win_width / 2 - game_over.get_width() / 2, 250))
